@@ -1,78 +1,81 @@
-# 🌸 Iris Flower Species Classification using Machine Learning
+# 🌸 Iris Flower Classification using Machine Learning
 
-A machine learning project that classifies Iris flowers into three different species using Logistic Regression, Random Forest, and K-Nearest Neighbors (KNN).
+A machine learning project that predicts Iris flower species using three classification algorithms: Logistic Regression, Random Forest, and K-Nearest Neighbors (KNN).
 
-The project focuses on data preprocessing, feature analysis, model training, performance evaluation, and comparison of multiple classification algorithms.
+This project focuses on data preprocessing, exploratory data analysis, feature importance, model training, and performance evaluation.
 
 ## 📌 Project Overview
 
-The Iris dataset contains measurements of flower features that can be used to identify different Iris species.
+The Iris dataset contains measurements of three different Iris flower species.
 
-This project builds and evaluates three machine learning classification models to determine which algorithm performs best on the dataset.
+Using these measurements, this project trains machine learning models to classify flowers into:
 
-**Target Classes:**
 - Iris-setosa
 - Iris-versicolor
 - Iris-virginica
 
+The performance of three classification algorithms is compared to identify the best-performing model.
+
 ## 🎯 Objectives
 
 - Explore and understand the Iris dataset.
-- Perform data preprocessing and feature analysis.
-- Understand relationships between different features.
-- Train multiple machine learning classification models.
-- Evaluate model performance using different metrics.
-- Compare models and identify the best-performing algorithm.
+- Perform data preprocessing and label encoding.
+- Analyze relationships between different features.
+- Identify important features for classification.
+- Train multiple machine learning models.
+- Evaluate and compare model performance.
+- Identify the best-performing classification algorithm.
 
-## 🛠️ Technologies Used
+## 🛠️ Technologies & Libraries
 
-- **Python** – Programming language
-- **Pandas** – Data manipulation and preprocessing
-- **NumPy** – Numerical computations
-- **Matplotlib** – Data visualization
-- **Seaborn** – Statistical data visualization
-- **Scikit-learn** – Machine learning algorithms and evaluation
+| Technology | Purpose |
+|---|---|
+| Python | Programming language |
+| Pandas | Data manipulation |
+| NumPy | Numerical operations |
+| Matplotlib | Data visualization |
+| Seaborn | Statistical visualization |
+| Scikit-learn | Machine learning |
 
 ## 🤖 Machine Learning Algorithms
 
-This project implements three classification algorithms:
-
 ### 1. Logistic Regression
-A supervised machine learning algorithm used for classification by estimating the probability of different classes.
+A supervised classification algorithm that predicts the probability of a data point belonging to a particular class.
 
 ### 2. Random Forest
-An ensemble learning algorithm that combines multiple decision trees to improve classification performance.
+An ensemble learning algorithm that combines multiple decision trees to improve prediction accuracy and reliability.
 
 ### 3. K-Nearest Neighbors (KNN)
-A distance-based algorithm that classifies a data point based on the majority class of its nearest neighbors.
+A distance-based classification algorithm that predicts the class of a new data point based on its nearest neighbors.
 
 ## 🔍 Project Workflow
 
-### 1. Data Loading and Preprocessing
+### 1. Data Loading & Preprocessing
 - Load the Iris dataset using Pandas.
-- Check dataset shape and missing values.
+- Check dataset dimensions and missing values.
 - Identify duplicate records.
-- Remove unnecessary columns.
-- Encode target labels into numerical values.
-- Split data into training and testing sets (80:20).
+- Remove unnecessary ID columns.
+- Encode species labels using LabelEncoder.
+- Split data into 80% training and 20% testing sets.
 
-### 2. Exploratory Data Analysis
-- Analyze relationships between flower features.
-- Generate a correlation matrix.
-- Identify important features using Random Forest.
-- Visualize feature distributions and relationships.
+### 2. Exploratory Data Analysis (EDA)
+- Analyze relationships between flower measurements.
+- Generate a feature correlation matrix.
+- Examine feature importance using Random Forest.
+- Create pair plots to visualize relationships between features.
 
 ### 3. Model Training
-Train the following models:
+Train three classification models:
+
 - Logistic Regression
 - Random Forest
 - KNN (k=5)
 
-StandardScaler is applied to Logistic Regression and KNN through pipelines.
+StandardScaler is used with Logistic Regression and KNN to normalize feature values.
 
 ### 4. Model Evaluation
 
-Evaluate model performance using:
+Evaluate the models using:
 
 - Accuracy
 - Precision
@@ -81,32 +84,31 @@ Evaluate model performance using:
 - 5-Fold Cross-Validation
 
 ### 5. Model Comparison
-
-Compare all three algorithms using their evaluation metrics and select the best-performing model based on cross-validation accuracy.
+Compare the performance of all three algorithms and select the best model based on cross-validation accuracy, using test F1-score as a tie-breaker.
 
 ## 📊 Visualizations
 
-### 1. Feature Correlation Matrix
+### 1. Correlation Matrix
 
-Displays the correlation between different flower measurements and the target species.
+Shows the relationship between different flower features and their correlation with the target species.
 
 ![Correlation Matrix](01_correlation.png)
 
 ### 2. Feature Importance
 
-Shows the relative importance of different features in the Random Forest model.
+Displays the importance of different features in the Random Forest model.
 
 ![Feature Importance](02_feature_importance.png)
 
 ### 3. Model Performance Comparison
 
-Compares the performance of Logistic Regression, Random Forest, and KNN.
+Compares the Accuracy, Precision, Recall, and F1-score of all three models.
 
 ![Model Comparison](04_model_comparison.png)
 
 ### 4. Confusion Matrices
 
-Visualizes correct and incorrect predictions made by each classification model.
+Displays the actual and predicted classifications for each model.
 
 ![Confusion Matrices](05_confusion_matrices.png)
 
@@ -129,53 +131,53 @@ MachineLearning/
 
 ## 🚀 How to Run the Project
 
-### 1. Clone the repository
+### Step 1: Clone the Repository
 
 ```bash
 git clone https://github.com/shreyashiijain/MachineLearning.git
 ```
 
-### 2. Navigate to the project directory
+### Step 2: Navigate to the Folder
 
 ```bash
 cd MachineLearning
 ```
 
-### 3. Install the required libraries
+### Step 3: Install Dependencies
 
 ```bash
 pip install numpy pandas matplotlib seaborn scikit-learn
 ```
 
-### 4. Add the Iris dataset
+### Step 4: Add the Dataset
 
-Place the `Iris.csv` dataset in the project directory.
+Download the Iris dataset and place `Iris.csv` inside the project folder.
 
-### 5. Update file paths
+### Step 5: Update File Paths
 
-In `iris_pipeline.py`, update the dataset and output paths to your local directory:
+In `iris_pipeline.py`, update these lines:
 
 ```python
-df = pd.read_csv("Iris.csv")
 OUT = "./"
+df = pd.read_csv("Iris.csv")
 ```
 
-### 6. Run the Python script
+### Step 6: Run the Script
 
 ```bash
 python iris_pipeline.py
 ```
 
-The script will train the models, evaluate their performance, and generate comparison results and visualizations.
+The script will train the models, evaluate their performance, and generate visualizations and a model comparison CSV file.
 
 ## 📚 Key Learnings
 
 - Understanding supervised machine learning.
-- Working with classification algorithms.
-- Data preprocessing and label encoding.
+- Data cleaning and preprocessing.
 - Feature correlation and feature importance.
+- Implementing classification algorithms.
 - Training and testing machine learning models.
-- Model evaluation using classification metrics.
+- Model evaluation using multiple performance metrics.
 - Understanding cross-validation and confusion matrices.
 
 ## 👩‍💻 Author
@@ -188,4 +190,3 @@ The script will train the models, evaluate their performance, and generate compa
 ---
 
 ⭐ If you find this project interesting, consider giving the repository a star!
-
