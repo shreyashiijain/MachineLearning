@@ -162,3 +162,30 @@ OUT = "./"
 
 ### 6. Run the Python script
 
+```bash
+python iris_pipeline.py
+```
+
+The script will train the models, evaluate their performance, and generate comparison results and visualizations.
+
+## 📚 Key Learnings
+
+- Understanding supervised machine learning.
+- Working with classification algorithms.
+- Data preprocessing and label encoding.
+- Feature correlation and feature importance.
+- Training and testing machine learning models.
+- Model evaluation using classification metrics.
+- Understanding cross-validation and confusion matrices.
+
+## 👩‍💻 Author
+
+**Shreyashi Jain**
+
+- GitHub: [@shreyashiijain](https://github.com/shreyashiijain)
+- LinkedIn: [Connect with me](https://www.linkedin.com/in/shreyashi-jain-9a81a4333/)
+
+---
+
+⭐ If you find this project interesting, consider giving the repository a star!
+
